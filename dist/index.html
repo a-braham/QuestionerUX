@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" >
+    <title>How to set up React, Webpack, and Babel</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4 offset-md-1">
+                <p>Create a new article</p>
+                <div id="create-article-form">
+                    <!-- form -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="root">
+    Loading...
+</div>
+    <script type="text/babel">
+  // Add your brand new component here
+  const Greeting = () => <h1>Hello World today!</h1>;
+  ReactDOM.render(
+      <Greeting />,
+      document.getElementById('root')
+  );
+</script>
+<script type="text/javascript" src="main.js"></script></body>
+</html>
