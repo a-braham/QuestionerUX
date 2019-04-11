@@ -10,12 +10,20 @@ module.exports = {
         }
       },
       {
+        test: /\.(css|sass)$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.html$/,
         use: [
           {
             loader: "html-loader"
           }
         ]
+      },
+      {
+        test: /\.(gif|svg|jpg|png)$/,
+        loader: 'file-loader',
       }
     ]
   },

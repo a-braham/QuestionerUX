@@ -1,0 +1,17 @@
+.mytest {
+    color: rgb(0, 139, 53);
+}
+
+.testButton{
+    background: darkcyan;
+}
+.navigation{
+    height: 450px;
+    background-image: url("../img/background.jpg");
+}
+
+.link-item{
+    color: rgb(27, 116, 16);
+    font-style: normal;
+    font-weight: bold;
+}
