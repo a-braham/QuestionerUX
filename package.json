@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +32,7 @@
     "react-image": "^2.1.1",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
+    "serve": "^11.0.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2"
   }
