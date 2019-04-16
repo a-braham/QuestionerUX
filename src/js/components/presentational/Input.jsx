@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../../../css/index.css"
 
-const Input = ({ label, text, type, id, value, handleChange }) => (
+const Input = ({ error, label, text, type, id, value, handleChange }) => (
   <div className="form-group">
+    <p className="alert-danger" id="error">{error}</p>
     <label className="mytest" htmlFor={label}>{text}</label>
     <input
       type={type}

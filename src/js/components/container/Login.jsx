@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Input } from "../presentational/Input.jsx";
-import "../../../css/index.css"
+import "../../../css/index.css";
 
 class Login extends Component {
   constructor(props) {
@@ -39,7 +39,7 @@ class Login extends Component {
           let id_token = localStorage.getItem('token')
           console.log(id_token)
         } else {
-          window.alert(response.detail)
+          document.getElementById('error').innerHTML = response.detail
         }
       })
   }

@@ -18,7 +18,7 @@ const Header = () => (
                 </div>
                 <div className="collapse navbar-collapse" id="collapseBar">
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item"><Link to='/login' className="nav-link"><p className="link-item" data-toggle="modal" data-target="#myModal">Sign In</p></Link></li>
+                        <li className="nav-item"><Link to='/' className="nav-link"><p className="link-item" data-toggle="modal" data-target="#myModal">Sign In</p></Link></li>
                         <li className="nav-item"><Link to='/signup' className="nav-link"> <p className="link-item">Sign Up</p></Link></li>
                     </ul>
                 </div>
