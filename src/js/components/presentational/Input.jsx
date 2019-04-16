@@ -3,19 +3,18 @@ import PropTypes from "prop-types";
 import "../../../css/index.css"
 
 const Input = ({ error, label, text, type, id, value, handleChange }) => (
-  <div className="form-group">
-    <p className="alert-danger" id="error">{error}</p>
-    <label className="mytest" htmlFor={label}>{text}</label>
-    <input
-      type={type}
-      className="form-control is-valid"
-      id={id}
-      value={value}
-      onChange={handleChange}
-      required
-    />
-    <div className="invalid-feedback">Required</div>
-  </div>
+    <div className="form-group">
+      <label className="mytest" htmlFor={label}>{text}</label>
+      <input
+        type={type}
+        className="form-control is-valid"
+        id={id}
+        value={value}
+        onChange={handleChange}
+        required
+      />
+      <div className="invalid-feedback">Required</div>
+    </div>
 );
 Input.propTypes = {
   label: PropTypes.string.isRequired,
@@ -27,6 +26,5 @@ Input.propTypes = {
 };
 
 export { 
-  Input,
+  Input
 }
-//<div class="valid-feedback">Valid.</div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import { toast } from "react-toastify";
 import { Input } from "../presentational/Input.jsx";
 import "../../../css/index.css";
 
@@ -20,10 +20,7 @@ class Login extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const url = "https://salty-badlands-19445.herokuapp.com/api/auth/login/"
-
-    // console.log("User Email : ", email.value)
-    // console.log("User Password : ", password.value)
+    const url = "https://questioner-v3.herokuapp.com/api/auth/login/"
     const data = { email: this.state.email, password: this.state.password }
     fetch(url, {
       method: 'POST',
@@ -37,9 +34,20 @@ class Login extends Component {
         if ('token', response.token) {
           localStorage.setItem('token', response.token)
           let id_token = localStorage.getItem('token')
-          console.log(id_token)
+          window.location.href = "/";
+          toast.success("Successfully Signup, Pls activate your account", {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 3000,
+            hideProgressBar: true,
+            pauseOnHover: true,
+          });
         } else {
-          document.getElementById('error').innerHTML = response.detail
+          toast.error(response.detail, {
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 3000,
+            hideProgressBar: true,
+            pauseOnHover: true,
+          });
         }
       })
   }
@@ -74,5 +82,3 @@ class Login extends Component {
 }
 
 export default Login
-// const wrapper = document.getElementById("create-article-form");
-// wrapper ? ReactDOM.render(<Login />, wrapper) : false;
