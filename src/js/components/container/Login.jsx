@@ -20,7 +20,7 @@ class Login extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const url = "http://127.0.0.1:8000/api/auth/login/"
+    const url = "https://salty-badlands-19445.herokuapp.com/api/auth/login/"
 
     // console.log("User Email : ", email.value)
     // console.log("User Password : ", password.value)
