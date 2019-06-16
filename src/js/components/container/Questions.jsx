@@ -25,25 +25,19 @@ class Home extends Component {
                 })
             }
             ))
-    }
+    }  
     render() {
         const { meetups } = this.state;
         const loaded = meetups.length ? (
             meetups.map(meetup => {
                 return (
                     <div className="container" key={meetup.id}>
-                        <div className="row">
-                            <div className="col-sm-4">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <h4 className="card-title">{meetup.title}</h4>
-                                        <p className="card-text">{meetup.body}</p>
-                                    </div>
-                                    <div className="card-footer">
-                                        <a href="#" className="btn btn-success">{meetup.tag}</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="card">
+                            <div className="card-body">
+                                <h4 className="card-title">{meetup.title}</h4>
+                                <p className="card-text">{meetup.body}</p>
+                                <a href="#" className="btn btn-success">Read more..</a>
+                            </div>  
                         </div>
                     </div>
                 )
